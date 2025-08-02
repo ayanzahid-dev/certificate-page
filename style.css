@@ -9,6 +9,12 @@ body {
   background: #f9f9f9;
   color: #333;
   padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: #f1f1f1;
 }
 
 header {
@@ -18,10 +24,11 @@ header {
 
 header h1 {
   font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 header p {
-  color: #666;
+  color: #6c757d;
 }
 
 .gallery {
@@ -36,7 +43,11 @@ header p {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s;
+}
+
+body.dark .card {
+  background: #1e1e1e;
 }
 
 .card:hover {
@@ -55,7 +66,11 @@ header p {
 
 .card p {
   font-size: 0.95rem;
-  color: #777;
+  color: #555;
+}
+
+body.dark .card p {
+  color: #ccc;
 }
 
 .card span {
@@ -63,6 +78,10 @@ header p {
   margin: 8px 0;
   font-size: 0.9rem;
   color: #444;
+}
+
+body.dark .card span {
+  color: #bbb;
 }
 
 .card button {
@@ -90,6 +109,7 @@ header p {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.8);
+  
 }
 
 .modal-content {
@@ -98,7 +118,9 @@ header p {
   max-width: 90%;
   max-height: 80vh;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
+
 
 .close {
   position: absolute;
@@ -107,4 +129,54 @@ header p {
   color: white;
   font-size: 35px;
   cursor: pointer;
+}
+
+/* Toggle button */
+#toggleMode {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 2000;
+  transition: background 0.3s;
+}
+
+#toggleMode:hover {
+  background: #444;
+}
+
+body.dark #toggleMode {
+  background: #eee;
+  color: #111;
+}
+
+/* Responsive Fixes */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p,
+  .card span {
+    font-size: 0.85rem;
+  }
+
+  .card button {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  #toggleMode {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
 }
