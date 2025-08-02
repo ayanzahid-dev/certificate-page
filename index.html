@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internship Certificates</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+  <header>
+    <h1>Internship Certificates</h1>
+    <p>Proudly presented to our successful interns</p>
+  </header>
+
+  <main class="gallery">
+    <div class="card">
+      <img src="./assests/Ali Raza.png" alt="Certificate 1" />
+      <h3>Ali Raza</h3>
+      <p>Web Developer Intern</p>
+      <span>Issued: July 2025</span>
+      <button onclick="openModal(this)">View Certificate</button>
+    </div>
+
+    <div class="card">
+      <img src="./assests/Sana.png" alt="Certificate 2" />
+      <h3>Sana Ahmed</h3>
+      <p>Frontend Intern</p>
+      <span>Issued: June 2025</span>
+      <button onclick="openModal(this)">View Certificate</button>
+    </div>
+
+    <div class="card">
+      <img src="./assests/Moiz.png" alt="Certificate 3" />
+      <h3>Moiz Kazmi</h3>
+      <p>Backend Intern</p>
+      <span>Issued: May 2025</span>
+      <button onclick="openModal(this)">View Certificate</button>
+    </div>
+
+    <div class="card">
+      <img src="./assests/Ayesha.png" alt="Certificate 4" />
+      <h3>Ayesha Noor</h3>
+      <p>UI/UX Intern</p>
+      <span>Issued: May 2025</span>
+      <button onclick="openModal(this)">View Certificate</button>
+    </div>
+
+    <div class="card">
+      <img src="./assests/Hassan.png" alt="Certificate 5" />
+      <h3>Hassan Malik</h3>
+      <p>Marketing Intern</p>
+      <span>Issued: April 2025</span>
+      <button onclick="openModal(this)">View Certificate</button>
+    </div>
+
+    <div class="card">
+      <img src="./assests/Fatima.png" alt="Certificate 6" />
+      <h3>Fatima Zahra</h3>
+      <p>SEO Intern</p>
+      <span>Issued: March 2025</span>
+      <button onclick="openModal(this)">View Certificate</button>
+    </div>
+  </main>
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg" />
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
